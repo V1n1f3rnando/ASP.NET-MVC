@@ -8,15 +8,15 @@
 <a href="/Home/Index">Página Inicial</a>
 <hr />
 
-@** Classe modelo da página *@
+@* Classe modelo da página *@
 @model Estudo01.Models.PlanoCadastroViewModel
 
-@** Formulário de Cadastro d eplano *@
+@* Formulário de Cadastro d eplano *@
 @using (Html.BeginForm())
 {
     <div class="row">
         <div class="col-md-4">
-
+            @* Usando Razor para montar os campos da page *@ 
             <label>Nome do plano:</label>
             @Html.TextBoxFor(model => model.Nome, new
     {
