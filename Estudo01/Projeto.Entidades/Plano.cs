@@ -11,12 +11,24 @@ namespace Projeto.Entidades
         public int IdPlano { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
-        //Relacionamento entre as entidades Cliente e Plano 1 para n 
+        //Relacionamento de associação entre as entidades Cliente e Plano. 
         public List<Cliente> Cliente { get; set; }
 
         public Plano()
         {
 
+        }
+
+        public Plano(int idPlano, string nome, string descricao)
+        {
+            IdPlano = idPlano;
+            Nome = nome;
+            Descricao = descricao;
+        }
+
+        public override string ToString()
+        {
+            return $"ID:{IdPlano}, Nome:{Nome}, Descrição:{Descricao}";
         }
     }
 }
