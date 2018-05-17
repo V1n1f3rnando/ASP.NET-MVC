@@ -12,6 +12,8 @@ namespace Projeto.Entidades
         public string Nome { get; set; }
         public string Email { get; set; }
         public DateTime DataCadastro { get; set; }
+        //Relacionamento entre as entidades Cliente e Plano 1 para n 
+        public Plano Plano { get; set; }
 
         public Cliente()
         {
