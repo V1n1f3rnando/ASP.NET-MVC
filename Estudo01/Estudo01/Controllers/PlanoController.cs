@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Projeto.Entidades;// Imports
+using Projeto.DAL.Repositorios; //Imports
+using Estudo01.Models; //Imports
 
 namespace Estudo01.Controllers
 {
@@ -11,6 +14,35 @@ namespace Estudo01.Controllers
         // GET: Plano
         public ActionResult Cadastro()
         {
+            return View();
+
+        }
+
+        [HttpPost] // Recebendo requisição do tipo post para o submit do botão de cadastro
+        public ActionResult Cadastrar(PlanoCadastroViewModel model)
+        {
+            try
+            {
+                //Verificando erros na validação
+                if (ModelState.IsValid)
+                {
+                    Plano p = new Plano();
+
+                    p.Nome = model.Nome;
+                    p.Descricao = model.Descricao;
+
+                    // Gravando no banco
+                    PlanoRepositorio rep = new PlanoRepositorio();
+                    rep.Inserir(p);
+                }
+            }
+            catch (Exception e)
+            {
+
+                //Exibindo erro na página
+                ViewBag.Mensagem = "Ocorreu um erro"+ e.Message;
+            }
+
             return View();
         }
 
