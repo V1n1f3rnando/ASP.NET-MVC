@@ -52,7 +52,32 @@ namespace Estudo01.Controllers
 
         public ActionResult Consulta()
         {
-            return View();
+            //Declarando uma lista da classe model
+            List<PlanoConsultaViewModel> lista = 
+                new List<PlanoConsultaViewModel>();
+
+            try
+            {
+                PlanoRepositorio rep = new PlanoRepositorio();
+                foreach (Plano p  in rep.Listar() )
+                {
+                    PlanoConsultaViewModel model = 
+                        new PlanoConsultaViewModel();
+
+                    model.IdPlano = p.IdPlano;
+                    model.Nome = p.Nome;
+                    model.Descricao = p.Descricao;
+
+                    lista.Add(model); //adicionar na lista
+                }
+            }
+            catch (Exception e)
+            {
+
+                ViewBag.Mensagem = "Erro: " + e.Message;
+            }
+
+            return View(lista); //Enviando a lista
         }
     }
 }
