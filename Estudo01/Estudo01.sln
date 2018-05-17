@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2 - Camada de Acesso a Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto.Entidades", "Projeto.Entidades\Projeto.Entidades.csproj", "{B532A92A-F2AB-4BF8-9A10-CE6447D62057}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto.DAL", "Projeto.DAL\Projeto.DAL.csproj", "{B0E6A320-FD80-496F-8F1E-13CA3B300850}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{B532A92A-F2AB-4BF8-9A10-CE6447D62057}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B532A92A-F2AB-4BF8-9A10-CE6447D62057}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B532A92A-F2AB-4BF8-9A10-CE6447D62057}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0E6A320-FD80-496F-8F1E-13CA3B300850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0E6A320-FD80-496F-8F1E-13CA3B300850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0E6A320-FD80-496F-8F1E-13CA3B300850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0E6A320-FD80-496F-8F1E-13CA3B300850}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +44,7 @@ Global
 		{21CCDA12-B543-44D0-8A77-B9834B721553} = {721D1291-8E55-41C1-98B4-1EB34315F8CA}
 		{BB9A4ADB-AC7D-4B4B-83BC-43AF476464EF} = {721D1291-8E55-41C1-98B4-1EB34315F8CA}
 		{B532A92A-F2AB-4BF8-9A10-CE6447D62057} = {EEFE2C37-AD8E-4126-B8FC-3B268C3FA308}
+		{B0E6A320-FD80-496F-8F1E-13CA3B300850} = {BB9A4ADB-AC7D-4B4B-83BC-43AF476464EF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3678D4AD-3052-4680-899C-11329F67B12D}
