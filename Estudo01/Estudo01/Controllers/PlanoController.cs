@@ -79,5 +79,10 @@ namespace Estudo01.Controllers
 
             return View(lista); //Enviando a lista
         }
+
+        public ActionResult Edicao()
+        {
+            return View();
+        }
     }
 }
