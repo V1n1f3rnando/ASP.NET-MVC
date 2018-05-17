@@ -12,17 +12,21 @@
 @model Estudo01.Models.PlanoCadastroViewModel
 
 @* Formulário de Cadastro d eplano *@
+
 @using (Html.BeginForm())
 {
     <div class="row">
         <div class="col-md-4">
-            @* Usando Razor para montar os campos da page *@ 
+            @* Usando Razor para montar os campos da page *@
             <label>Nome do plano:</label>
-            @Html.TextBoxFor(model => model.Nome, new
-    {
+            @Html.TextBoxFor(model => model.Nome, new {
         @class = "form-control",
-        @placeholder = "Digite o nome do plano"
-    })
+        @placeholder = "Digite o nome do plano" })
+
+            <span class="text-danger">
+                @Html.ValidationMessageFor(model => model.Nome)
+            </span>
+
             <br />
 
             <label>Descrição do plano:</label>
@@ -31,7 +35,12 @@
         @class = "form-control",
         @placeholder = "Digite a descrição do plano"
     })
-    <br />
+            <span class="text-danger">
+                @Html.ValidationMessageFor(model => model.Descricao)
+            </span>
+
+            <br />
+
             <input type="submit" class="btn btn-success"
                    value="Cadastrar Plano" />
             <hr />

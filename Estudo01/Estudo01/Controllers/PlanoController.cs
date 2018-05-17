@@ -19,7 +19,7 @@ namespace Estudo01.Controllers
         }
 
         [HttpPost] // Recebendo requisição do tipo post para o submit do botão de cadastro
-        public ActionResult Cadastrar(PlanoCadastroViewModel model)
+        public ActionResult Cadastro(PlanoCadastroViewModel model)
         {
             try
             {
@@ -34,6 +34,10 @@ namespace Estudo01.Controllers
                     // Gravando no banco
                     PlanoRepositorio rep = new PlanoRepositorio();
                     rep.Inserir(p);
+
+                    ViewBag.Mensagem = $"Plano:{p.Nome}, cadastrado com sucesso !";
+
+                    ModelState.Clear();
                 }
             }
             catch (Exception e)
