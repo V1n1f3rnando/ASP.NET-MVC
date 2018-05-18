@@ -80,9 +80,62 @@ namespace Estudo01.Controllers
             return View(lista); //Enviando a lista
         }
 
-        public ActionResult Edicao()
+        public ActionResult Edicao(int idPlano)
         {
-            return View();
+            // instanciando a classe modelo
+            PlanoEdicaoViewModel model = new PlanoEdicaoViewModel();
+
+            try
+            {
+                //buscando por id..
+                PlanoRepositorio rep = new PlanoRepositorio();
+                Plano p = rep.Selecionar(idPlano);
+
+                model.IdPlano = p.IdPlano;
+                model.Nome = p.Nome;
+                model.Descricao = p.Descricao;
+
+
+            }
+            catch (Exception e)
+            {
+                ViewBag.Mensagem = e.Message;
+                throw;
+            }
+            return View(model); //enviando a model...
         }
+
+        [HttpPost] //Recebe requisições do formulário
+        public ActionResult Edicao(PlanoEdicaoViewModel model)
+        {
+          
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    Plano p = new Plano();
+
+                    p.IdPlano = model.IdPlano;
+                    p.Nome = model.Nome;
+                    p.Descricao = model.Descricao;
+
+                    PlanoRepositorio rep = new PlanoRepositorio();
+                    rep.Atualizar(p);
+
+                    ViewBag.Mensagem = $" Plano:{p.Nome}, atualizado com sucesso !";
+                }
+              
+
+
+            }
+            catch (Exception e)
+            {
+                ViewBag.Mensagem = e.Message;
+                throw;
+            }
+            return View(); 
+        }
+
+
     }
 }
