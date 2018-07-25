@@ -177,20 +177,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Projeto.DAL\Projeto.DAL.csproj">
-      <Project>{4bc27c84-e774-4368-8698-67c63ec7ce2c}</Project>
+      <Project>{b2496588-9ceb-445e-83f0-b2847935c6e4}</Project>
       <Name>Projeto.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Projeto01.Entidades\Projeto01.Entidades.csproj">
       <Project>{24d196d5-9512-46ef-86c1-034d07094b6d}</Project>
       <Name>Projeto01.Entidades</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="Scripts\index.d.ts" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
