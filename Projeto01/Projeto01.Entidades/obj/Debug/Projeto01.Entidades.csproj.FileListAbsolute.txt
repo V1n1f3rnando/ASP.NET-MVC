@@ -1,0 +1,6 @@
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\Projeto01\Projeto01.Entidades\bin\Debug\Projeto01.Entidades.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\Projeto01\Projeto01.Entidades\bin\Debug\Projeto01.Entidades.pdb
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\Projeto01\Projeto01.Entidades\obj\Debug\Projeto01.Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\Projeto01\Projeto01.Entidades\obj\Debug\Projeto01.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\Projeto01\Projeto01.Entidades\obj\Debug\Projeto01.Entidades.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\Projeto01\Projeto01.Entidades\obj\Debug\Projeto01.Entidades.pdb
