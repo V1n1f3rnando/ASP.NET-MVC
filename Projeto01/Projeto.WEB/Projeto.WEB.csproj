@@ -176,7 +176,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Projeto.DAL\Projeto.DAL.csproj">
+      <Project>{4bc27c84-e774-4368-8698-67c63ec7ce2c}</Project>
+      <Name>Projeto.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Projeto01.Entidades\Projeto01.Entidades.csproj">
+      <Project>{24d196d5-9512-46ef-86c1-034d07094b6d}</Project>
+      <Name>Projeto01.Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>

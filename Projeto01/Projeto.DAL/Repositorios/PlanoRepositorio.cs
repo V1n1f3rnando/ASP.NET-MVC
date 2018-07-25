@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Projeto01.Entidades;
-using System.Data.SqlClient;
+using Projeto01.Entidades; //Importando
+using System.Data.SqlClient; //Importando
 
 namespace Projeto.DAL.Repositorios
 {
@@ -12,20 +12,25 @@ namespace Projeto.DAL.Repositorios
     {
         public void Inserir(Plano p)
         {
+            //Abrindo conexão com o banco
             AbrirConexao();
 
+            //Comando SQL para inserir dados
             string query = "insert into Plano values(Nome, Descricao) values (@Nome, @Descricao)";
 
+            //Executando query
             cmd = new SqlCommand(query, con);
             cmd.Parameters.AddWithValue("@Nome",p.Nome);
             cmd.Parameters.AddWithValue("@Descricao", p.Descricao);
             cmd.ExecuteNonQuery();
 
+            //fechando conexão
             FecharConexao();
         }
 
         public void Alterar(Plano p)
         {
+            
             AbrirConexao();
 
             string query = "update Plano set Nome = @Nome, Descicao = @Descricao where IdPlano = @IdPano";
@@ -52,13 +57,17 @@ namespace Projeto.DAL.Repositorios
 
         public List<Plano> Buscar()
         {
+            //Abrindo conexão
             AbrirConexao();
 
+            //Comando SQL
             string query = "select * from Plano";
 
+            //Solicitando resposta 
             cmd = new SqlCommand(query, con);
             dr = cmd.ExecuteReader();
 
+            //Listando planos
             List<Plano> lista = new List<Plano>();
             while (dr.Read())
             {
@@ -72,8 +81,10 @@ namespace Projeto.DAL.Repositorios
 
             }
 
+            //Fechando conexão 
             FecharConexao();
 
+            //Retornando o resultado
             return lista;
         }
 
