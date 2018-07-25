@@ -16,7 +16,7 @@ namespace Projeto.DAL.Repositorios
             AbrirConexao();
 
             //Comando SQL para inserir dados
-            string query = "insert into Plano values(Nome, Descricao) values (@Nome, @Descricao)";
+            string query = "insert into Plano (Nome, Descricao) values(@Nome, @Descricao)";
 
             //Executando query
             cmd = new SqlCommand(query, con);

@@ -30,7 +30,7 @@ namespace Projeto.WEB.Controllers
                     PlanoRepositorio rep = new PlanoRepositorio();
                     rep.Inserir(p);
 
-                    ViewBag.Mensgaem = $"Plano:{p.Nome}, cadastrado com sucesso !";
+                    ViewBag.Mensagem = $"Plano: {p.Nome}, cadastrado com sucesso !";
 
                     ModelState.Clear(); // Limpando os campos
                     
