@@ -13,6 +13,30 @@
     <h2>Cadastro de Planos</h2>
     <a href="/Home/Index">Página inicial</a>
     <hr />
+    @* Classe modelo da página *@
+    @model  Projeto.WEB.Models.PlanoCadastroViewModel
+
+    @using (Html.BeginForm())
+    {
+        <div class="row">
+            <div class="col-md-4">
+                <label>Nome do Plano:</label>
+                @Html.TextBoxFor(model => model.Nome,
+               new {@class = "form-control",
+               @placeholder = "Digite o nome do plano"})
+                <br />
+
+                <label>Descrição:</label>
+                @Html.TextBoxFor(model => model.Descricao,
+               new {@class = "form-control",
+                    @placeholder = "Digite a descrição do plano"})
+                <br />
+
+                <input type="submit" class="btn btn-success" value="Cadastrar Plano" id="btncadastro" />
+            </div>
+
+        </div>
+    }
 
 </body>
 </html>
