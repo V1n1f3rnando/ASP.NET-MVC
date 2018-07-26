@@ -147,6 +147,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ClienteCadastroViewModel.cs" />
+    <Compile Include="Models\ClienteConsultaViewModel.cs" />
     <Compile Include="Models\PlanoCadastroViewModel.cs" />
     <Compile Include="Models\PlanoConsultaViewModel.cs" />
     <Compile Include="Models\PlanoEdicaoViewModel.cs" />

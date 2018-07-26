@@ -15,5 +15,63 @@
     <a href="/Home/Index">Página inicial</a>
     <hr />
 
+    @*Model desta página*@
+    @model Projeto.WEB.Models.ClienteCadastroViewModel
+
+    @using (Html.BeginForm())
+    {
+        <div class="row">
+            <div class="col-md-4">
+
+                <label>Nome do Cliente:</label>
+                @Html.TextBoxFor(model => model.Nome, new
+           {
+               @Class = "form-control",
+               @placeholder = "Informe o nome do cliente"
+           })
+                <span class="text-danger">
+                    @Html.ValidationMessageFor(model => model.Nome)
+                </span>
+            <br />
+            
+                <label>Email:</label>
+                @Html.TextBoxFor(model => model.Email, new
+           {
+               @Class = "form-control",
+               @placeholder = "Informe o email"
+           })
+                <span class="text-danger">
+                    @Html.ValidationMessageFor(model => model.Email)
+                </span>
+            <br />
+
+                <label>Sexo:</label>
+                @Html.EnumDropDownListFor(model => model.Sexo, new
+           {
+               @Class = "form-control"
+           })
+                <span>
+                    @Html.ValidationMessageFor(model => model.Sexo)
+                </span>
+                <br />
+
+                <label>EstadoCivíl:</label>
+                @Html.EnumDropDownListFor(model => model.EstadoCivil, new
+           {
+               @Class = "form-control"
+           })
+                <br />
+
+                <input type="submit" value="Cadastrar Cliente" class="btn btn-primary" />
+                <br />
+
+                <strong>
+                    @ViewBag.Mensagem
+                </strong>
+            </div>
+        </div>
+    }
+
+
 </body>
 </html>
