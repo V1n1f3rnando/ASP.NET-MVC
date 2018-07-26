@@ -73,5 +73,10 @@ namespace Projeto.WEB.Controllers
 
             return View(lista);
         }
+
+        public ActionResult Edicao()
+        {
+            return View();
+        }
     }
 }

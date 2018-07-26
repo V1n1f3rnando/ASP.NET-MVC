@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Edição de Plano</title>
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body class="container">
+
+    <h2>Atualizar Plano</h2>
+    <a href="/Plano/Consulta">Consultar Planos</a>
+    <hr />
+
+    @*Classe model da página*@
+    @model Projeto.WEB.Models.PlanoEdicaoViewModel
+
+    @using (Html.BeginForm())
+    {
+        <div class="row">
+            <div class="col-md-4">
+
+                <!--campo oculto-->
+                @Html.HiddenFor(model => model.IdPlano)
+
+                <label>Nome do Plano:</label>
+                @Html.TextBoxFor(model => model.Nome, new
+                {
+                    @Class = "form-control",
+                    @placeholder =  "Digite o nome do plano"
+                })
+
+            <span class="text-danger">
+                @Html.ValidationMessageFor(model => model.Nome);
+            </span>
+
+            <br />
+            
+            <label>Descrição do Plano:</label>
+            @Html.TextBoxFor(model => model.Descricao, new
+            {
+                @Class = "form-control",
+                @placeholder = "Informe a descrição do plano"
+            })
+
+            <span>
+                @Html.ValidationMessageFor(model => model.Descricao);
+            </span>
+            
+            <br />
+            
+            <input type="submit" class="btn btn-primary" value="Atualizar Plano" />
+            <hr />
+
+            <strong>@ViewBag.Mensagem</strong>
+
+            </div>
+        </div>
+    }
+</body>
+</html>
