@@ -33,7 +33,7 @@ namespace Projeto.DAL.Repositorios
             
             AbrirConexao();
 
-            string query = "update Plano set Nome = @Nome, Descicao = @Descricao where IdPlano = @IdPano";
+            string query = "update Plano set Nome = @Nome, Descricao = @Descricao where IdPlano = @IdPlano";
 
             cmd = new SqlCommand(query, con);
             cmd.Parameters.AddWithValue("@IdPlano", p.IdPlano);

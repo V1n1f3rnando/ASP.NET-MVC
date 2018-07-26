@@ -74,8 +74,54 @@ namespace Projeto.WEB.Controllers
             return View(lista);
         }
 
-        public ActionResult Edicao()
+        public ActionResult Edicao(int idPlano)
         {
+            //Instânciando a classe de modelo
+            PlanoEdicaoViewModel model = new PlanoEdicaoViewModel();
+
+            try
+            {
+                //buscando plano por id
+                PlanoRepositorio rep = new PlanoRepositorio();
+                Plano p = rep.BuscarPorId(idPlano);
+
+                model.IdPlano = p.IdPlano;
+                model.Nome = p.Nome;
+                model.Descricao = p.Descricao;
+            }
+            catch (Exception ex)
+            {
+
+                ViewBag.Mensagem = ex.Message;
+            }
+
+            return View(model);
+        }
+
+        [HttpPost] // recebe requisição do formulário
+        public ActionResult Edicao(PlanoEdicaoViewModel model)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    Plano p = new Plano();
+
+                    p.IdPlano = model.IdPlano;
+                    p.Nome = model.Nome;
+                    p.Descricao = model.Descricao;
+
+                    PlanoRepositorio rep = new PlanoRepositorio();
+                    rep.Alterar(p);
+
+                    ViewBag.Mensagem = $"Plano: {p.Nome}, atualizado com sucesso !";
+                }
+            }
+            catch (Exception ex)
+            {
+
+                ViewBag.Mensagem = "Erro:" + ex.Message;
+            }
             return View();
         }
     }
