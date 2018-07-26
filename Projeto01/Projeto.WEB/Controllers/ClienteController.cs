@@ -28,8 +28,32 @@ namespace Projeto.WEB.Controllers
         {
             if (ModelState.IsValid)
             {
-                //mensagem 
-                ViewBag.Mensagem = "Cliente cadastrado com sucesso.";
+                try
+                {
+                    Cliente c = new Cliente();
+                    c.Plano = new Plano();
+
+                    c.Nome = model.Nome;
+                    c.Email = model.Email;
+                    c.Sexo = model.Sexo;
+                    c.EstadoCivil = model.EstadoCivil;
+                    c.DataCadastro = DateTime.Now;
+                    c.Plano.IdPlano = model.IdPlano;
+
+                    ClienteRepositorio rep = new ClienteRepositorio();
+                    rep.Inserir(c);
+
+                    //mensagem 
+                    ViewBag.Mensagem = "Cliente cadastrado com sucesso.";
+                }
+                catch (Exception ex)
+                {
+
+                    ViewBag.Mensagem = "Erro: " + ex.Message;
+                }
+                
+
+               
             }
 
             ClienteCadastroViewModel viewModel = new ClienteCadastroViewModel();
