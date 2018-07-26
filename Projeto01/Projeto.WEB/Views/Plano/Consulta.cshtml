@@ -12,5 +12,48 @@
     <h2>Consulta de Planos</h2>
     <a href="/Home/Index">Página inicial</a>
     <hr />
+
+    @*** Classe model desta página*@
+    @model List<Projeto.WEB.Models.PlanoConsultaViewModel>
+
+    <div>
+        <strong>@ViewBag.Mensagem</strong>
+    </div>
+
+    <!-- Tabela para exibir os planos -->
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome do Plano</th>
+                <th>Descrição</th>
+                <th>Operações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.IdPlano</td>
+                    <td>@item.Nome</td>
+                    <td>@item.Descricao</td>
+                    <td>
+                        <a href="#" class="btn btn-primary btn-sm"> Atualizar Plano</a>
+                        <a href="#" class="btn btn-danger btn-sm"> Excluir Plano</a>
+                    </td>
+                    
+
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">
+                    Quantidade de planos: @Model.Count
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
 </body>
 </html>

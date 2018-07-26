@@ -47,7 +47,31 @@ namespace Projeto.WEB.Controllers
 
         public ActionResult Consulta()
         {
-            return View();
+            //declrando lista da classe modelo
+            List<PlanoConsultaViewModel> lista = new List<PlanoConsultaViewModel>();
+
+            try
+            {
+                PlanoRepositorio rep = new PlanoRepositorio();
+
+                foreach (var p in rep.Buscar())
+                {
+                    PlanoConsultaViewModel model = new PlanoConsultaViewModel();
+                    model.IdPlano = p.IdPlano;
+                    model.Nome = p.Nome;
+                    model.Descricao = p.Descricao;
+
+                    lista.Add(model); //Adicionar na lista 
+                }
+            }
+            catch (Exception ex)
+            {
+
+                ViewBag.Mensagem = "Erro:" + ex.Message;
+            }
+
+
+            return View(lista);
         }
     }
 }
