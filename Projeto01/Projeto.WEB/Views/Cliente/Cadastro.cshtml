@@ -18,6 +18,7 @@
     @*Model desta página*@
     @model Projeto.WEB.Models.ClienteCadastroViewModel
 
+    @*Criando formulário *@
     @using (Html.BeginForm())
     {
         <div class="row">
@@ -60,6 +61,14 @@
            {
                @Class = "form-control"
            })
+                <br />
+
+                <label>Plano:</label>
+                @Html.DropDownListFor(model => model.IdPlano, Model.ListagemDePlanos, "-Escolha uma opção-",
+                new
+                {
+                    @Class = "form-control"
+                })
                 <br />
 
                 <input type="submit" value="Cadastrar Cliente" class="btn btn-primary" />
