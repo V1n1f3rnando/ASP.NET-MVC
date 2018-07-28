@@ -4,9 +4,58 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Edicao</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 </head>
-<body>
-    <div> 
-    </div>
-</body>
+<body class="container">
+    <h2>Edição de Clientes</h2>
+    <a href="/Cliente/Consulta">Consultar Cliente</a>
+    <hr />
+    
+    @*model desta página*@
+    @model Projeto.WEB.Models.ClienteEdicaoViewModel
+
+    @using (Html.BeginForm())
+    {
+        <div class="row">
+            <div class=" col-md-6">
+                <!--Campo oculto-->
+                @Html.HiddenFor(model => model.IdCliente)
+
+                <label>Nome:</label>
+                @Html.TextBoxFor(model => model.Nome, new
+           {
+               @Class = "form-control",
+               @placeholder = "Informe o nome"
+           })
+
+                <label>Email:</label>
+                @Html.TextBoxFor(model => model.Email, new
+           {
+               @Class = "form-control",
+               @placeholder = "Informe o email"
+           })
+
+                <label>Sexo:</label>
+                @Html.EnumDropDownListFor(model => model.Sexo, new
+           {
+               @Class = "form-control"
+           })
+
+                <label>EstadoCivíl:</label>
+                @Html.EnumDropDownListFor(model => model.EstadoCivil, new
+           {
+               @Class = "form-control"
+           })
+                <br />
+                <input type="button" value="Atualizar Cliente" class="btn btn-success" />
+                <br />
+                <hr />
+
+                <strong>@ViewBag.Mensagem</strong>
+
+            </div>
+        </div>
+    }
+ </body>
 </html>

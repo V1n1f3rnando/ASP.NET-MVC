@@ -102,10 +102,11 @@ namespace Projeto.WEB.Controllers
             try
             {
                 ClienteRepositorio rep = new ClienteRepositorio();
+                Cliente c = new Cliente();
+              
+                c = rep.BuscarPorId(id);
 
-                Cliente c = rep.BuscarPorId(id);
-
-                model.IdCliente = c.IdCliente;
+                model.IdCliente = id;
                 model.Nome = c.Nome;
                 model.Email = c.Email;
                 model.Sexo = c.Sexo;
@@ -119,7 +120,7 @@ namespace Projeto.WEB.Controllers
                 ViewBag.Mensagem = "Erro " + ex.Message;
             }
 
-            return View();
+            return View(model);
         }
 
         [HttpPost]

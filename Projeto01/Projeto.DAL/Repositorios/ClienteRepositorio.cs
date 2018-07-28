@@ -68,7 +68,7 @@ namespace Projeto.DAL.Repositorios
         {
             AbrirConexao();
 
-            string query = " select c.Nome, c.Email, c.Sexo, c.EstadoCivil, c.IdPlano, p.Nome as plano from Cliente c " +
+            string query = " select c.Nome, c.Email, c.Sexo, c.EstadoCivil, p.IdPlano, p.Nome as plano from Cliente c " +
                 " inner join Plano p on p.IdPlano = c.IdPlano where c.IdCliente = @IdCliente ";
 
             cmd = new SqlCommand(query, con);
@@ -80,6 +80,7 @@ namespace Projeto.DAL.Repositorios
             if (dr.Read())
             {
                 c = new Cliente();
+                c.Plano = new Plano();
 
                 c.Nome = Convert.ToString(dr["Nome"]);
                 c.Email = Convert.ToString(dr["Email"]);
@@ -87,6 +88,7 @@ namespace Projeto.DAL.Repositorios
                 c.EstadoCivil = (EstadoCivil)Enum.Parse(typeof(EstadoCivil), Convert.ToString(dr["EstadoCivil"]));
                 c.Plano.IdPlano = Convert.ToInt32(dr["IdPlano"]);
                 c.Plano.Nome = Convert.ToString(dr["plano"]);
+
 
             }
 
