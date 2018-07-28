@@ -21,6 +21,7 @@
             <div class=" col-md-6">
                 <!--Campo oculto-->
                 @Html.HiddenFor(model => model.IdCliente)
+                @Html.HiddenFor(model => model.IdPlano)
 
                 <label>Nome:</label>
                 @Html.TextBoxFor(model => model.Nome, new
@@ -48,7 +49,7 @@
                @Class = "form-control"
            })
                 <br />
-                <input type="button" value="Atualizar Cliente" class="btn btn-success" />
+                <input type="submit" value="Atualizar Cliente" class="btn btn-success" />
                 <br />
                 <hr />
 

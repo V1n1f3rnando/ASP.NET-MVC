@@ -131,6 +131,7 @@ namespace Projeto.WEB.Controllers
                 if (ModelState.IsValid)
                 {
                     Cliente c = new Cliente();
+                    c.Plano = new Plano();
 
                     c.IdCliente = model.IdCliente;
                     c.Nome = model.Nome;
