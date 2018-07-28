@@ -15,5 +15,7 @@ namespace Projeto.WEB.Models
         public Sexo Sexo { get; set; }
         public EstadoCivil EstadoCivil { get; set; }
         public DateTime DataCadastro { get; set; }
+        public int IdPlano { get; set; }
+        public string NomePlano { get; set; }
     }
 }

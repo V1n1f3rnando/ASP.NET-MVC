@@ -65,7 +65,34 @@ namespace Projeto.WEB.Controllers
 
         public ActionResult Consulta()
         {
-            return View();
+            List<ClienteConsultaViewModel> lista = new List<ClienteConsultaViewModel>();
+
+            try
+            {
+                //Varrendo a consulta de cliente
+                ClienteRepositorio rep = new ClienteRepositorio();
+
+                foreach (var i in rep.Buscar())
+                {
+                    ClienteConsultaViewModel model = new ClienteConsultaViewModel();
+
+                    model.IdCliente = i.IdCliente;
+                    model.Nome = i.Nome;
+                    model.Email = i.Email;
+                    model.Sexo = i.Sexo;
+                    model.EstadoCivil = i.EstadoCivil;
+                    model.DataCadastro = i.DataCadastro;
+                    model.IdPlano = i.Plano.IdPlano;
+                    model.NomePlano = i.Plano.Nome;
+
+                    lista.Add(model);
+                }
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Mensagem = "Erro " + ex.Message;
+            }
+            return View(lista);
         }
 
         //Método para obter os planos
