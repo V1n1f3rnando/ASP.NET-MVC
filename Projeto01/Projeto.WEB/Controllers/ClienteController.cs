@@ -95,6 +95,66 @@ namespace Projeto.WEB.Controllers
             return View(lista);
         }
 
+        public ActionResult Edicao(int id)
+        {
+            ClienteEdicaoViewModel model = new ClienteEdicaoViewModel();
+
+            try
+            {
+                ClienteRepositorio rep = new ClienteRepositorio();
+
+                Cliente c = rep.BuscarPorId(id);
+
+                model.IdCliente = c.IdCliente;
+                model.Nome = c.Nome;
+                model.Email = c.Email;
+                model.Sexo = c.Sexo;
+                model.EstadoCivil = c.EstadoCivil;
+                model.IdPlano = c.Plano.IdPlano;
+                
+            }
+            catch (Exception ex)
+            {
+
+                ViewBag.Mensagem = "Erro " + ex.Message;
+            }
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Edicao(ClienteEdicaoViewModel model)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    Cliente c = new Cliente();
+
+                    c.IdCliente = model.IdCliente;
+                    c.Nome = model.Nome;
+                    c.Email = model.Email;
+                    c.Sexo = model.Sexo;
+                    c.EstadoCivil = model.EstadoCivil;
+                    c.Plano.IdPlano = model.IdPlano;
+
+                    ClienteRepositorio rep = new ClienteRepositorio();
+
+                    rep.Alterar(c);
+
+                    ViewBag.Mensagem = "Dados atualizados com sucesso !";
+                }
+              
+
+            }
+            catch (Exception ex)
+            {
+
+                ViewBag.Mensagem = "Erro " + ex.Message;
+            }
+            return View();
+        }
+
         //Método para obter os planos
         private List<SelectListItem> ObterPlanos()
         {

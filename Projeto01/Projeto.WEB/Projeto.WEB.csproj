@@ -149,6 +149,7 @@
     </Compile>
     <Compile Include="Models\ClienteCadastroViewModel.cs" />
     <Compile Include="Models\ClienteConsultaViewModel.cs" />
+    <Compile Include="Models\ClienteEdicaoViewModel.cs" />
     <Compile Include="Models\PlanoCadastroViewModel.cs" />
     <Compile Include="Models\PlanoConsultaViewModel.cs" />
     <Compile Include="Models\PlanoEdicaoViewModel.cs" />
@@ -174,6 +175,7 @@
     <Content Include="Views\Cliente\Cadastro.cshtml" />
     <Content Include="Views\Cliente\Consulta.cshtml" />
     <Content Include="Views\Plano\Edicao.cshtml" />
+    <Content Include="Views\Cliente\Edicao.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
