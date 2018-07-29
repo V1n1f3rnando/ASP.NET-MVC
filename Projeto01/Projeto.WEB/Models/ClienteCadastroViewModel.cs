@@ -10,7 +10,6 @@ namespace Projeto.WEB.Models
 {
     public class ClienteCadastroViewModel
     {
-        private List<SelectListItem> _listagemDePlanos;
 
         //Validações
         [Required(ErrorMessage = "Por favor, informe um nome.")]

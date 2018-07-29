@@ -98,20 +98,23 @@ namespace Projeto.WEB.Controllers
         public ActionResult Edicao(int id)
         {
             ClienteEdicaoViewModel model = new ClienteEdicaoViewModel();
-
+            model.ListaDePlanos = ObterPlanos();
+            
             try
             {
                 ClienteRepositorio rep = new ClienteRepositorio();
                 Cliente c = new Cliente();
+                c.Plano = new Plano();
+               
               
                 c = rep.BuscarPorId(id);
 
-                model.IdCliente = id;
+                model.IdCliente = c.IdCliente;
                 model.Nome = c.Nome;
                 model.Email = c.Email;
                 model.Sexo = c.Sexo;
                 model.EstadoCivil = c.EstadoCivil;
-                model.IdPlano = c.Plano.IdPlano;
+                model.IdPlano = c.Plano.IdPlano;        
                 
             }
             catch (Exception ex)
@@ -139,6 +142,7 @@ namespace Projeto.WEB.Controllers
                     c.Sexo = model.Sexo;
                     c.EstadoCivil = model.EstadoCivil;
                     c.Plano.IdPlano = model.IdPlano;
+                    
 
                     ClienteRepositorio rep = new ClienteRepositorio();
 
@@ -154,6 +158,7 @@ namespace Projeto.WEB.Controllers
 
                 ViewBag.Mensagem = "Erro " + ex.Message;
             }
+
             return View();
         }
 

@@ -21,33 +21,40 @@
             <div class=" col-md-6">
                 <!--Campo oculto-->
                 @Html.HiddenFor(model => model.IdCliente)
-                @Html.HiddenFor(model => model.IdPlano)
-
+              
                 <label>Nome:</label>
                 @Html.TextBoxFor(model => model.Nome, new
-           {
-               @Class = "form-control",
-               @placeholder = "Informe o nome"
-           })
+    {
+        @Class = "form-control",
+        @placeholder = "Informe o nome"
+    })
 
                 <label>Email:</label>
                 @Html.TextBoxFor(model => model.Email, new
-           {
-               @Class = "form-control",
-               @placeholder = "Informe o email"
-           })
+    {
+        @Class = "form-control",
+        @placeholder = "Informe o email"
+    })
 
                 <label>Sexo:</label>
                 @Html.EnumDropDownListFor(model => model.Sexo, new
-           {
-               @Class = "form-control"
-           })
+    {
+        @Class = "form-control"
+    })
 
                 <label>EstadoCivíl:</label>
                 @Html.EnumDropDownListFor(model => model.EstadoCivil, new
-           {
-               @Class = "form-control"
-           })
+    {
+        @Class = "form-control"
+    })
+
+                <label>Plano:</label>
+                @Html.DropDownListFor(model => model.IdPlano, Model.ListaDePlanos, "- Selecione uma Opção -", new {
+                @Class = "form-control"
+
+                }) 
+
+
                 <br />
                 <input type="submit" value="Atualizar Cliente" class="btn btn-success" />
                 <br />
