@@ -159,7 +159,10 @@ namespace Projeto.WEB.Controllers
                 ViewBag.Mensagem = "Erro " + ex.Message;
             }
 
-            return View();
+            ClienteEdicaoViewModel viewmodel = new ClienteEdicaoViewModel();
+            viewmodel.ListaDePlanos = ObterPlanos();
+
+            return View(viewmodel);
         }
 
         //Método para obter os planos
