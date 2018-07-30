@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Exclusão de  Clientes</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="container">
+    <h2>Exclusão de Clientes</h2>
+    <a href="/Cliente/Consulta">Consulta de Clientes</a>
+    <hr />
+    <br />
+
+    @*Model da página*@
+    @model Projeto.WEB.Models.ClienteExcluirViewModel
+
+    @using (Html.BeginForm())
+    {
+        <div class="row">
+            <div class="col-md-6">
+                <label>ID:</label>
+                @Html.TextBoxFor(model => model.IdCliente, new
+    {
+        @Class = "form-control",
+        @readonly = "readonly"
+    })
+                <label>Nome:</label>
+                @Html.TextBoxFor(model => model.Nome, new
+    {
+        @Class = "form-control",
+        @readonly = "readonly"
+    })
+                <label>Email:</label>
+                @Html.TextBoxFor(model => model.Email, new
+    {
+        @Class = "form-control",
+        @readonly = "readonly"
+    })
+                <label>Sexo:</label>
+                @Html.TextBoxFor(model => model.Sexo, new
+    {
+        @Class = "form-control",
+        @readonly = "readonly"
+    })
+                <label>EstadoCivíl:</label>
+                @Html.TextBoxFor(model => model.EstadoCivil, new
+    {
+        @Class = "form-control",
+        @readonly = "readonly"
+    })
+                <br />
+
+                <input type="submit" class="btn-danger" value="Excluir Cliente" />
+                <br />
+                <br />
+
+                <strong>@ViewBag.Mensagem</strong>
+            </div>
+        </div>
+    }
+</body>
+</html>

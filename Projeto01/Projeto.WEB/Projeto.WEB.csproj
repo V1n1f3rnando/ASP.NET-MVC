@@ -150,6 +150,7 @@
     <Compile Include="Models\ClienteCadastroViewModel.cs" />
     <Compile Include="Models\ClienteConsultaViewModel.cs" />
     <Compile Include="Models\ClienteEdicaoViewModel.cs" />
+    <Compile Include="Models\ClienteExcluirViewModel.cs" />
     <Compile Include="Models\PlanoCadastroViewModel.cs" />
     <Compile Include="Models\PlanoConsultaViewModel.cs" />
     <Compile Include="Models\PlanoEdicaoViewModel.cs" />
@@ -178,6 +179,7 @@
     <Content Include="Views\Plano\Edicao.cshtml" />
     <Content Include="Views\Cliente\Edicao.cshtml" />
     <Content Include="Views\Plano\Excluir.cshtml" />
+    <Content Include="Views\Cliente\Excluir.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

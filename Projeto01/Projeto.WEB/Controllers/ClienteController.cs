@@ -165,6 +165,60 @@ namespace Projeto.WEB.Controllers
             return View(viewmodel);
         }
 
+        public ActionResult Excluir(int id)
+        {
+            ClienteExcluirViewModel model = new ClienteExcluirViewModel();
+
+            ClienteRepositorio rep = new ClienteRepositorio();
+
+            try
+            {
+                Cliente c = new Cliente();
+                c = rep.BuscarPorId(id);
+
+                model.IdCliente = c.IdCliente;
+                model.Nome = c.Nome;
+                model.Email = c.Email;
+                model.Sexo = c.Sexo;
+                model.EstadoCivil = c.EstadoCivil;
+                
+
+            }
+            catch (Exception ex)
+            {
+
+                ViewBag.Mensagem = "Erro "+ex.Message;
+            }
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Excluir(ClienteExcluirViewModel model)
+        {
+            try
+            {
+                
+                int id = model.IdCliente;
+
+                ClienteRepositorio rep = new ClienteRepositorio();
+                rep.Delete(id);
+
+                ViewBag.Mensagem = "Cliente excluído com sucesso !";
+
+                
+                
+            }
+            catch (Exception ex)
+            {
+
+                ViewBag.Mensagem = "Erro " + ex.Message;
+            }
+
+            return View();
+
+        }
+
         //Método para obter os planos
         private List<SelectListItem> ObterPlanos()
         {
@@ -183,5 +237,6 @@ namespace Projeto.WEB.Controllers
 
             return lista;
         }
+
     }
 }

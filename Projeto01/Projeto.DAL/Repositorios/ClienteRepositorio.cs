@@ -118,6 +118,19 @@ namespace Projeto.DAL.Repositorios
             FecharConexao();
         }
 
+        public void Delete(int id)
+        {
+            AbrirConexao();
+
+            string query = "delete from Cliente where IdCliente = @IdCliente";
+
+            cmd = new SqlCommand(query,con);
+            cmd.Parameters.AddWithValue("IdCliente", id);
+            cmd.ExecuteNonQuery();
+
+            FecharConexao();
+        }
+
 
     }
 }
