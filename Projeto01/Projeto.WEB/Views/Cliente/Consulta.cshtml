@@ -38,22 +38,23 @@
         <tbody>
             @foreach (var c in Model)
             {
-            <tr>
-                <td>@c.IdCliente</td>
-                <td>@c.Nome</td>
-                <td>@c.Email</td>
-                <td>@c.Sexo</td>
-                <td>@c.EstadoCivil</td>
-                <td>@c.DataCadastro</td>
-                <td>@c.NomePlano</td>
-                <td>
+                <tr>
+                    <td>@c.IdCliente</td>
+                    <td>@c.Nome</td>
+                    <td>@c.Email</td>
+                    <td>@c.Sexo</td>
+                    <td>@c.EstadoCivil</td>
+                    <td>@c.DataCadastro</td>
+                    <td>@c.NomePlano</td>
+                    <td>
 
-                    <a href="/Cliente/Edicao?id=@c.IdCliente" class="btn btn-primary col-md-9"> Atualizar Cliente</a>
-                    <a href="#" class="btn btn-danger col-md-9"> Excluir Cliente</a>
+                        <a href="/Cliente/Edicao?id=@c.IdCliente" class="btn btn-primary col-md-9"> Atualizar Cliente</a>
+                        <a href="#" class="btn btn-danger col-md-9"> Excluir Cliente</a>
 
-                </td>
-            </tr>
+                    </td>
+                </tr>
             }
+
         </tbody>
         <tfoot>
             <tr>
@@ -63,6 +64,5 @@
             </tr>
         </tfoot>
     </table>
-
 </body>
 </html>

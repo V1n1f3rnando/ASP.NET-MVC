@@ -53,6 +53,8 @@ namespace Projeto.DAL.Repositorios
             cmd = new SqlCommand(query, con);
             cmd.Parameters.AddWithValue("@IdPlano", id);
             cmd.ExecuteNonQuery();
+
+            FecharConexao();
         }
 
         public List<Plano> Buscar()
@@ -113,5 +115,7 @@ namespace Projeto.DAL.Repositorios
 
             return p;
         }
+
+        
     }
 }

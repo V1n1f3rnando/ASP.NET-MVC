@@ -1,0 +1,57 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Exclusão de Planos</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body class="container">
+    <h2>Exclusão de Planos</h2>
+    <a href="/Plano/Consulta">Voltar para consulta</a>
+    <hr />
+
+    @*Model da página*@
+    @model Projeto.WEB.Models.PlanoExcluirViewModel
+
+    @using (Html.BeginForm())
+    {
+    <div class="row">
+        <div class="col-md-6">
+            <label>Código:</label>
+            @Html.TextBoxFor(model => model.IdPlano, new
+    {
+        @Class = "form-control",
+        @readonly = "readonly"
+    })
+
+            <label>Plano:</label>
+            @Html.TextBoxFor(model => model.Nome, new
+    {
+        @Class = "form-control",
+        @readonly = "readonly"
+    })
+
+            <label>Descrição:</label>
+            @Html.TextAreaFor(model => model.Descricao, new
+    {
+        @Class = "form-control",
+        @readonly = "readonly"
+    })
+            <br />
+
+            <input type="submit" class="btn btn-danger" value="Excluir Plano" />
+            <br />
+            <br />
+
+            <strong>@ViewBag.Mensagem</strong>
+
+        </div>
+        
+    </div>
+    }
+</body>
+</html>

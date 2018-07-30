@@ -7,6 +7,8 @@
     <title>Consulta de Planos</title>
 
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
 </head>
 <body class="container">
     <h2>Consulta de Planos</h2>
@@ -39,10 +41,8 @@
                     <td>@item.Descricao</td>
                     <td>
                         <a href="/Plano/Edicao?idPlano=@item.IdPlano" class="btn btn-primary btn-sm"> Atualizar Plano</a>
-                        <a href="#" class="btn btn-danger btn-sm"> Excluir Plano</a>
+                        <a href="/Plano/Excluir?idPlano=@item.IdPlano" class="btn btn-danger btn-sm"> Excluir Plano</a>
                     </td>
-                    
-
                 </tr>
             }
         </tbody>
@@ -56,4 +56,5 @@
     </table>
 
 </body>
+
 </html>

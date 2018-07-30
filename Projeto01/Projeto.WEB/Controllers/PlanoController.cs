@@ -124,5 +124,55 @@ namespace Projeto.WEB.Controllers
             }
             return View();
         }
+
+        public ActionResult Excluir(int idPlano)
+        {
+            PlanoExcluirViewModel model = new PlanoExcluirViewModel();
+
+            try
+            {
+                PlanoRepositorio rep = new PlanoRepositorio();
+                Plano p = new Plano();
+                p = rep.BuscarPorId(idPlano);
+
+                model.IdPlano = p.IdPlano;
+                model.Nome = p.Nome;
+                model.Descricao = p.Descricao;
+
+            }
+            catch (Exception ex)
+            {
+
+                ViewBag.Mensagem = ex.Message;
+            }
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Excluir(PlanoExcluirViewModel model)
+        {
+            PlanoRepositorio rep = new PlanoRepositorio();
+
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    int id = model.IdPlano;
+
+                    rep.Deletar(id);
+
+                    ViewBag.Mensagem = " Plano Excluído com sucesso !";
+
+                    ModelState.Clear();
+                }
+            }
+            catch (Exception)
+            {
+
+                ViewBag.Mensagem = "Existem clientes vinculados a este plano, altere e tente novamente.";
+
+            }
+            return View();
+        }
     }
 }
