@@ -75,3 +75,7 @@ C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\CadastroDeCliente\Projeto.WEB\obj
 C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\CadastroDeCliente\Projeto.WEB\obj\Debug\Projeto.WEB.csproj.CopyComplete
 C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\CadastroDeCliente\Projeto.WEB\obj\Debug\Projeto.WEB.dll
 C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\CadastroDeCliente\Projeto.WEB\obj\Debug\Projeto.WEB.pdb
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\CadastroDeCliente\Projeto.WEB\bin\Projeto.Entidades.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\CadastroDeCliente\Projeto.WEB\bin\Projeto.Entidades.pdb
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\CadastroDeCliente\Projeto.WEB\bin\Projeto.DAL.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\CadastroDeCliente\Projeto.WEB\bin\Projeto.DAL.pdb

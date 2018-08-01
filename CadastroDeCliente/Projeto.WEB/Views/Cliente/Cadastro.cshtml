@@ -5,53 +5,6 @@
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-@section scripts{
-    
-    <script type="text/javascript">
-
-        //Funçãi inicial do jquery..
-        //Quando o conteúdo da página for carregado, inicie..
-        $(document).ready(function () {
-
-            //Criando evento no botão de cadastro
-            $("#btncadastro").click(function () {
-
-                //escrevendo conteúdo no elemento
-                $("#mensagem").html("Processando, por favor aguarde..");
-
-                //armazenar o conteúdo dos campos do form em formato JSON.
-
-                var model = {
-                    Nome: $("#nome").val(),
-                    Email: $("#email").val(),
-                    Sexo: $("#sexo").val(),
-                    EstadoCivil: $("#estadocivil").val()
-                };
-
-                //Imprimindo 
-                // $("#mensagem").html(JSON.stringify(model));
-
-                //função AJAX
-                $.ajax({
-                    type: "POST",
-                    url: "/Cliente/CadastrarCliente",
-                    data: model,
-                    success: function () { //requisição bem sucedida 
-
-                    },
-                    error: function (e) { //erro na requisição 
-
-                        $("#mensagem").html("Ocorreu um erro" + e.status);
-                    }
-                });
-
-            });
-
-        });
-    </script>
-    }
-
-
 <div>
     <a href="/Home/Index">Voltar</a> para a página inicial
 </div>
@@ -98,3 +51,45 @@
     </div>
 </div>
 
+@section scripts{
+
+    <script type="text/javascript">
+
+        //Funçãi inicial do jquery..
+        //Quando o conteúdo da página for carregado, inicie..
+        $(document).ready(function () {
+
+            //Criando evento no botão de cadastro
+            $("#btncadastro").click(function () {
+
+                //escrevendo conteúdo no elemento
+                $("#mensagem").html("Processando, por favor aguarde..");
+
+                //armazenar o conteúdo dos campos do form em formato JSON.
+
+                var model = {
+                    Nome: $("#nome").val(),
+                    Email: $("#email").val(),
+                    Sexo: $("#sexo").val(),
+                    EstadoCivil: $("#estadocivil").val()
+                };
+
+                //função AJAX
+                $.ajax({
+                    type: "POST",
+                    url: "/Cliente/CadastrarCliente",
+                    data: model,
+                    success: function() { //requisição bem sucedida
+                       
+                    },
+                    error: function (e) { //erro na requisição
+
+                        $("#mensagem").html("Ocorreu um erro" + e.status);
+                    }
+                });
+
+            });
+
+        });
+    </script>
+}
