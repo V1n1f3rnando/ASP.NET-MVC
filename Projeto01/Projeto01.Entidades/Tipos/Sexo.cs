@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto01.Entidades.Tipos
 {
+    //Enum Sexo
     public enum Sexo
     {
         Feminino,

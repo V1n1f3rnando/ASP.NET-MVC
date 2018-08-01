@@ -36,6 +36,7 @@ namespace Projeto01.Entidades
             DataCadastro = dataCadastro;
         }
 
+        //Sobrecarga do método ToString da classe object
         public override string ToString()
         {
             return $"Id:{IdCliente}\n Nome:{Nome}\n Email:{Email}\n" +

@@ -26,6 +26,7 @@ namespace Projeto.WEB.Controllers
         [HttpPost]
         public ActionResult Cadastro(ClienteCadastroViewModel model)
         {
+            //checando a model
             if (ModelState.IsValid)
             {
                 try
