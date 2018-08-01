@@ -1,0 +1,36 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Estudos ASP.NET MVC</title>
+
+    <!--Folhas de estilo CSS do bootstrap-->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body class="container">
+    <h2>Sistema de controle de Clientes</h2>
+    Asp.Net MVC com JQuery, AJAX e JSON
+    <hr />
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <h4>@ViewBag.Titulo</h4>
+            <span>@ViewBag.Subtitulo</span>
+            <br />
+            <br />
+
+            <!--Conteúdo das demais páginas-->
+            @RenderBody()
+        </div>
+    </div>
+
+    <!-- Arquivos javascript -->
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+</body>
+</html>
