@@ -79,8 +79,8 @@
                     type: "POST",
                     url: "/Cliente/CadastrarCliente",
                     data: model,
-                    success: function() { //requisição bem sucedida
-                       
+                    success: function (msg) { //requisição bem sucedida
+                        $("#mensagem").html(msg);
                     },
                     error: function (e) { //erro na requisição
 
