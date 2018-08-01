@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Titulo = "Formulário de Cadastro de Cliente";
+    ViewBag.Subtitulo = "Por favor, preencha os campos abaixo.";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@section scripts{
+    
+    <script type="text/javascript">
+
+        //Funçãi inicial do jquery..
+        //Quando o conteúdo da página for carregado, inicie..
+        $(document).ready(function () {
+
+            //Criando evento no botão de cadastro
+            $("#btncadastro").click(function () {
+
+                //escrevendo conteúdo no elemento
+                $("#mensagem").html("Processando, por favor aguarde..");
+
+                //armazenar o conteúdo dos campos do form em formato JSON.
+
+                var model = {
+                    Nome: $("#nome").val(),
+                    Email: $("#email").val(),
+                    Sexo: $("#sexo").val(),
+                    EstadoCivil: $("#estadocivil").val()
+                };
+
+                //Imprimindo 
+                // $("#mensagem").html(JSON.stringify(model));
+
+                //função AJAX
+                $.ajax({
+                    type: "POST",
+                    url: "/Cliente/CadastrarCliente",
+                    data: model,
+                    success: function () { //requisição bem sucedida 
+
+                    },
+                    error: function (e) { //erro na requisição 
+
+                        $("#mensagem").html("Ocorreu um erro" + e.status);
+                    }
+                });
+
+            });
+
+        });
+    </script>
+    }
+
+
+<div>
+    <a href="/Home/Index">Voltar</a> para a página inicial
+</div>
+<br />
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+
+        <label>Nome do Cliente:</label>
+        <input type="text" id="nome" class="form-control"
+               placeholder="Informe seu nome." />
+        <br />
+
+        <label>Email:</label>
+        <input type="text" id="email" class="form-control"
+               placeholder="Informe seu email." />
+
+        <label>Sexo:</label>
+        <select id="sexo" class="form-control">
+            <option value="0">Selecione uma Opção</option>
+            <option value="1">Feminino</option>
+            <option value="2">Masculino</option>
+        </select>
+        <br />
+
+        <label>Estado Civil:</label>
+        <select id="estadocivil" class="form-control">
+            <option value="0">Selecione uma opção</option>
+            <option value="1">Solteiro</option>
+            <option value="2">Casado</option>
+            <option value="3">Divorciado</option>
+            <option value="4">Viúvo</option>
+        </select>
+        <br />
+
+        <button id="btncadastro" class="btn btn-success">
+            Cadastrar Cliente
+        </button>
+        <br />
+        <br />
+
+        <div id="mensagem"></div>
+    </div>
+</div>
+
