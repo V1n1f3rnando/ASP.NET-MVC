@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Titulo = "Consulta de Clientes";
+    ViewBag.Subtitulo = "Relação de Clientes Cadastrados";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+
+        <span id="mensagem"></span>
+
+        <table id="tabela" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Operações</th>
+                </tr>      
+            </thead>
+            <tbody>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        Quantidade de Clientes:
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+
+        //Função para executar a consulta de clientes
+        function consultar() {
+
+            //função AJAX
+            $.ajax({
+                type: "GET", 
+                url: "/Cliente/ConsultarClientes",
+                data: {},
+                success: function (obj) {
+
+                },
+                error: function (e) {
+                    $("#mensagem").html("Erro: " + e.status);
+                }
+
+            });
+
+            //executando o jquery quando a página é carregada
+            $(document).ready(function () {
+                //Executando a função de consulta ...
+                consultar();
+            });
+        }
+    </script>
+    }
+
