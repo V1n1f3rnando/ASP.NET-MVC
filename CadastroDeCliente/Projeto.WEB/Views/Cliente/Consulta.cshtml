@@ -6,6 +6,8 @@
 }
 
 <a href="/Home/Index">Voltar</a> a página inicial 
+<br />
+
 
 <div class="row">
     <div class="col-md-12">
@@ -27,7 +29,7 @@
             <tfoot>
                 <tr>
                     <td colspan="4">
-                        Quantidade de Clientes:
+                        Quantidade de Clientes: <span id="quantidade"></span>
                     </td>
                 </tr>
             </tfoot>
@@ -47,7 +49,29 @@
                 url: "/Cliente/ConsultarClientes",
                 data: {},
                 success: function (obj) {
+                    //verificando se o controller retornou uma lista
+                    if (obj instanceof Array) {
 
+                        //Exibir a quantidade de elementos na lista
+                        $("#quantidade").html(obj.length);
+
+                        //imprimir os dados da tabela..
+                        var conteudo = "";
+                        for (var i = 0; i < obj.length; i++) {
+                            conteudo += "<tr>";
+                            conteudo += "<td>" + obj[i].IdCliente + "</td>";
+                            conteudo += "<td>" + obj[i].Nome + "</td>";
+                            conteudo += "<td>" + obj[i].Email + "</td>";
+                            conteudo += "<td>" + obj[i].Sexo + "</td>";
+                            conteudo += "<td>" + obj[i].EstadoCivil + "</td>";
+                            conteudo += "</tr>";
+                        }
+
+                        $("#tabela tbody").html(conteudo);
+                    }
+                    else {
+                        $("#mensagem").html(obj);
+                    }
                 },
                 error: function (e) {
                     $("#mensagem").html("Erro: " + e.status);
@@ -55,12 +79,13 @@
 
             });
 
-            //executando o jquery quando a página é carregada
-            $(document).ready(function () {
-                //Executando a função de consulta ...
-                consultar();
-            });
         }
+
+        //executando o jquery quando a página é carregada
+        $(document).ready(function () {
+            //Executando a função de consulta ...
+            consultar();
+        });
     </script>
     }
 
