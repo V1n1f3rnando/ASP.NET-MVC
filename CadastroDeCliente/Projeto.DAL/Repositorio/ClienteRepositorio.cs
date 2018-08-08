@@ -44,5 +44,34 @@ namespace Projeto.DAL.Repositorio
 
             return count > 0;
         }
+
+        public List<Cliente> Buscar()
+        {
+            AbrirConexao();
+
+            string query = "select * from Cliente ";
+
+            cmd = new SqlCommand(query,con);
+            dr = cmd.ExecuteReader();
+
+            List<Cliente> lista = new List<Cliente>();
+
+            while (dr.Read())
+            {
+                var c = new Cliente();
+
+                c.IdCliente = Convert.ToInt32(dr["IdCliente"]);
+                c.Nome = Convert.ToString(dr["Nome"]);
+                c.Email = Convert.ToString(dr["Email"]);
+                c.EstadoCivil = (EstadoCivil)Enum.Parse(typeof(EstadoCivil), Convert.ToString(dr["EstadoCivil"]));
+                c.Sexo = (Sexo)Enum.Parse(typeof(Sexo), Convert.ToString(dr["Sexo"]));
+
+                lista.Add(c);
+            }
+
+            FecharConexao();
+
+            return lista;
+        }
     }
 }

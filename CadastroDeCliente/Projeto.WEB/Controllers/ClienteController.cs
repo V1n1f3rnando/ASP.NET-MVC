@@ -55,5 +55,37 @@ namespace Projeto.WEB.Controllers
                 return Json("Erro: " + e.Message);
             }
         }
+
+        public JsonResult ConsultarClientes()
+        {
+            try
+            {
+                List<ClienteConsultaViewModel> lista = new List<ClienteConsultaViewModel>();
+
+                //varrendo clientes obtidos no banco 
+                ClienteRepositorio rep = new ClienteRepositorio();
+
+                foreach (Cliente c in rep.Buscar())
+                {
+                    ClienteConsultaViewModel model = new ClienteConsultaViewModel();
+                    model.IdCliente = c.IdCliente;
+                    model.Nome = c.Nome;
+                    model.Email = c.Email;
+                    model.Sexo = c.Sexo.ToString();
+                    model.EstadoCivil = c.EstadoCivil.ToString();
+
+                    lista.Add(model);
+                }
+
+                //JsonRequestBehavior.Allo
+                return Json(lista, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+
+                return Json("Erro: " + ex.Message, JsonRequestBehavior.AllowGet);
+                
+            }
+        }
     }
 }
