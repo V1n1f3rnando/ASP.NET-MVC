@@ -21,6 +21,16 @@ namespace AutenticaUsuario.DAL.Repositories
                 .FirstOrDefault(u => u.Login.Equals(login)
                 && u.Senha.Equals(senha));
             }
-        }
+        }
+
+        public bool HasLogin(string login)
+        {
+            using (DataContext d = new DataContext())
+            {
+                return d.Usuario
+                .Count(u => u.Login.Equals(login)) > 0;
+            }
+        }
+
     }
 }

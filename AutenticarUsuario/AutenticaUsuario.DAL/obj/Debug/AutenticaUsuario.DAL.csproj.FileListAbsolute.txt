@@ -12,3 +12,17 @@ C:\Users\Fernando\source\repos\AutenticarUsuario\AutenticaUsuario.DAL\obj\Debug\
 C:\Users\Fernando\source\repos\AutenticarUsuario\AutenticaUsuario.DAL\obj\Debug\AutenticaUsuario.DAL.csproj.CopyComplete
 C:\Users\Fernando\source\repos\AutenticarUsuario\AutenticaUsuario.DAL\obj\Debug\AutenticaUsuario.DAL.dll
 C:\Users\Fernando\source\repos\AutenticarUsuario\AutenticaUsuario.DAL\obj\Debug\AutenticaUsuario.DAL.pdb
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticarUsuario\AutenticaUsuario.DAL\bin\Debug\AutenticaUsuario.DAL.dll.config
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticarUsuario\AutenticaUsuario.DAL\bin\Debug\AutenticaUsuario.DAL.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticarUsuario\AutenticaUsuario.DAL\bin\Debug\AutenticaUsuario.DAL.pdb
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticarUsuario\AutenticaUsuario.DAL\bin\Debug\AutenticaUsuario.Entidades.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticarUsuario\AutenticaUsuario.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticarUsuario\AutenticaUsuario.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticarUsuario\AutenticaUsuario.DAL\bin\Debug\AutenticaUsuario.Entidades.pdb
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticarUsuario\AutenticaUsuario.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticarUsuario\AutenticaUsuario.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticarUsuario\AutenticaUsuario.DAL\obj\Debug\AutenticaUsuario.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticarUsuario\AutenticaUsuario.DAL\obj\Debug\AutenticaUsuario.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticarUsuario\AutenticaUsuario.DAL\obj\Debug\AutenticaUsuario.DAL.csproj.CopyComplete
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticarUsuario\AutenticaUsuario.DAL\obj\Debug\AutenticaUsuario.DAL.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticarUsuario\AutenticaUsuario.DAL\obj\Debug\AutenticaUsuario.DAL.pdb
