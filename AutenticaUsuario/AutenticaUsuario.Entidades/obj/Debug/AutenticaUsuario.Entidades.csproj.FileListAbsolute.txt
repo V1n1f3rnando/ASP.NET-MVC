@@ -1,0 +1,12 @@
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Entidades\bin\Debug\AutenticaUsuario.Entidades.dll.config
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Entidades\bin\Debug\AutenticaUsuario.Entidades.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Entidades\bin\Debug\AutenticaUsuario.Entidades.pdb
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Entidades\bin\Debug\EntityFramework.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Entidades\bin\Debug\EntityFramework.xml
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Entidades\obj\Debug\AutenticaUsuario.Entidades.csprojAssemblyReference.cache
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Entidades\obj\Debug\AutenticaUsuario.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Entidades\obj\Debug\AutenticaUsuario.Entidades.csproj.CopyComplete
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Entidades\obj\Debug\AutenticaUsuario.Entidades.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Entidades\obj\Debug\AutenticaUsuario.Entidades.pdb

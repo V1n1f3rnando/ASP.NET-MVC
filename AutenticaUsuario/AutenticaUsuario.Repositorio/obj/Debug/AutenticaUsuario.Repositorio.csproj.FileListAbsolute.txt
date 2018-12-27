@@ -1,0 +1,15 @@
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Repositorio\bin\Debug\AutenticaUsuario.Repositorio.dll.config
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Repositorio\bin\Debug\AutenticaUsuario.Repositorio.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Repositorio\bin\Debug\AutenticaUsuario.Repositorio.pdb
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Repositorio\bin\Debug\AutenticaUsuario.Entidades.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Repositorio\bin\Debug\EntityFramework.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Repositorio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Repositorio\bin\Debug\AutenticaUsuario.Entidades.pdb
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Repositorio\bin\Debug\AutenticaUsuario.Entidades.dll.config
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Repositorio\bin\Debug\EntityFramework.xml
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Repositorio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Repositorio\obj\Debug\AutenticaUsuario.Repositorio.csprojAssemblyReference.cache
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Repositorio\obj\Debug\AutenticaUsuario.Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Repositorio\obj\Debug\AutenticaUsuario.Repositorio.csproj.CopyComplete
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Repositorio\obj\Debug\AutenticaUsuario.Repositorio.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.Repositorio\obj\Debug\AutenticaUsuario.Repositorio.pdb
