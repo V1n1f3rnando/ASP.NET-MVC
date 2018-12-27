@@ -1,6 +1,0 @@
-C:\Users\Fernando\source\repos\AutenticarUsuario\AutenticaUsuario.Entidades\bin\Debug\AutenticaUsuario.Entidades.dll
-C:\Users\Fernando\source\repos\AutenticarUsuario\AutenticaUsuario.Entidades\bin\Debug\AutenticaUsuario.Entidades.pdb
-C:\Users\Fernando\source\repos\AutenticarUsuario\AutenticaUsuario.Entidades\obj\Debug\AutenticaUsuario.Entidades.csprojResolveAssemblyReference.cache
-C:\Users\Fernando\source\repos\AutenticarUsuario\AutenticaUsuario.Entidades\obj\Debug\AutenticaUsuario.Entidades.csproj.CoreCompileInputs.cache
-C:\Users\Fernando\source\repos\AutenticarUsuario\AutenticaUsuario.Entidades\obj\Debug\AutenticaUsuario.Entidades.dll
-C:\Users\Fernando\source\repos\AutenticarUsuario\AutenticaUsuario.Entidades\obj\Debug\AutenticaUsuario.Entidades.pdb
