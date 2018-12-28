@@ -21,7 +21,7 @@ namespace AutenticaUsuario.Repositorio.Maps
             HasKey(u => u.IdUsuario);
 
             //Propriedades
-            Property(u => u.IdUsuario).HasColumnName("Nome");
+            Property(u => u.IdUsuario).HasColumnName("IdUsuario");
 
             Property(u => u.Nome).HasColumnName("Nome")
                 .HasMaxLength(50)

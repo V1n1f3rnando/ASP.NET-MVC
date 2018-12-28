@@ -80,3 +80,6 @@ C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario
 C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.WEB\bin\AutenticaUsuario.Entidades.dll
 C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.WEB\bin\AutenticaUsuario.Entidades.pdb
 C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.WEB\bin\AutenticaUsuario.Entidades.dll.config
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.WEB\bin\AutenticaUsuario.Repositorio.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.WEB\bin\AutenticaUsuario.Repositorio.pdb
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.WEB\bin\AutenticaUsuario.Repositorio.dll.config
