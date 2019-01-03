@@ -83,3 +83,6 @@ C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario
 C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.WEB\bin\AutenticaUsuario.Repositorio.dll
 C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.WEB\bin\AutenticaUsuario.Repositorio.pdb
 C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.WEB\bin\AutenticaUsuario.Repositorio.dll.config
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.WEB\bin\Newtonsoft.Json.dll
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.WEB\bin\Newtonsoft.Json.pdb
+C:\Users\Fernando\Documents\GitHub\ASP.NET-MVC\AutenticaUsuario\AutenticaUsuario.WEB\bin\Newtonsoft.Json.xml

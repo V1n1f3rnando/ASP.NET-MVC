@@ -21,6 +21,33 @@
         </h2>
     </div>
 
+    @using Newtonsoft.Json
+    @using AutenticaUsuario.WEB.Models
+    @{
+
+        //verificando se o usuário está autenticado
+        if (HttpContext.Current.User.Identity.IsAuthenticated)
+        {
+            //obtendo o usuário autenticado
+            string user = HttpContext.Current.User.Identity.Name;
+
+            //deserializar (converter de JSON para objeto..)
+            UsuarioAutenticaViewModel auth = JsonConvert.DeserializeObject<UsuarioAutenticaViewModel>(user);
+
+            <div class="row">
+                <div class="col-md-9 text-right">
+                    Usuário autenticado:<strong>@auth.Nome (@auth.Login)</strong>
+                    <br />
+
+                    Acesso realizaod em: <strong>@auth.DataHoraAcesso </strong>
+                </div>
+                <div class="col-md-3">
+                    <a href="/Usuario/Logout" class="btn btn-primary">Sair do sistema</a>
+                </div>
+            </div>
+        }
+    }
+
     <div class="row">
         <div class="col-md-12">
             @RenderBody()

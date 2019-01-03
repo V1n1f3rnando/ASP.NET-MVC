@@ -21,5 +21,13 @@ namespace AutenticaUsuario.Repositorio.Repositories
                     .FirstOrDefault(u => u.Login.Equals(login) && (u.Senha.Equals(senha)));
             }
         }
+
+        public bool HasLogin(string login)
+        {
+            using(DataContex d = new DataContex())
+            {
+                return d.Usuario.Count(u => u.Login.Equals(login)) > 0;
+            }
+        }
     }
 }
